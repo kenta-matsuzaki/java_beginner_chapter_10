@@ -1,5 +1,5 @@
 public class Hero {
-  int hp;
+  private int hp;
   String name;
   static int money;
 
@@ -16,11 +16,11 @@ public class Hero {
     System.out.println("勇者は別れを告げた");
   }
 
-  void die(){
+  private void die(){
     System.out.println(this.name + "は死んでしまった！");
   }
 
-  void attack(Matango m){
+  public void attack(Matango m){
     System.out.println(this.name + "の攻撃！");
     System.out.println("お化けキノコ" + m.suffix + "から2ポイントの攻撃を受けた！");
     this.hp -= 2;
